@@ -1,7 +1,9 @@
 from getpass import getpass
+import os
 
 
 secreta = getpass('Digite uma palavra secreta: ')
+os.system('cls')
 tamanho = len(secreta)
 digitadas = list()
 chances = len(secreta) - 2
@@ -22,6 +24,7 @@ while True:
     elif len(letra) > 1:
         print('Digite apenas uma letra')
         continue
+    os.system('cls')
 
     digitadas.append(letra)
 
@@ -32,6 +35,7 @@ while True:
     else:
         print(f'A letra {letra} não está na palavra!')
         digitadas.pop()
+    os.system('cls')
 
     secreto_temporario = ''
     for letra_secreta in secreta:
